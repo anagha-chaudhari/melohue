@@ -1,0 +1,1201 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', monospace;
+  background-color: #c0c0c0;
+  color: #000;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+main {
+  flex:1;
+   
+}
+
+
+.navbar {
+  background-color: #000080;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1.2rem;
+  font-size: 11px;
+}
+
+.logo {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.nav-links a {
+  background: #C0C0C0;
+  color: #000;
+  padding: 4px 10px;
+  text-decoration: none;
+  border: 2px solid #000;
+  box-shadow: inset -2px -2px #808080, inset 2px 2px #fff;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  background-color: #ececec; 
+}
+
+/*.hero {
+  background-color: #E0E0E0;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h2 {
+  font-size: 16px;
+  color: #000080;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 12px;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.hero .btn {
+  font-size: 11px;
+  padding: 0.5rem 1rem;
+  border: 2px solid #000;
+  background: #C0C0C0;
+  box-shadow: inset -2px -2px #808080, inset 2px 2px #fff;
+  cursor: pointer;
+}
+
+.hero .btn:hover {
+  background-color: #A0A0A0;
+}
+
+.hero-img {
+  max-width: 20%;
+  min-width: 20%;
+  height: auto;
+  border: 2px solid #000;
+  padding: 6px;
+  background-color: #E0E0E0;
+  box-shadow: inset -2px -2px #808080, inset 2px 2px #ffffff, 2px 2px #333;
+  border-radius: 2px;
+}*/
+
+/* .. Homepage .. */
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+ background: linear-gradient(135deg, #dfdfdf, #fdfdfd);
+  border: 2px solid #000;
+  padding: 2.5rem 2rem;
+  margin: 2rem;
+  box-shadow: inset -2px -2px #808080, inset 2px 2px #fff;
+  font-family: 'Press Start 2P', monospace;
+  border-radius: 6px;
+  gap: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 250px;
+  padding: 0;
+}
+
+.hero-content h2 {
+  font-size: 1.4rem;
+  color: #000080;
+  margin-bottom: 1rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-shadow: 1px 1px #ffffff;
+  line-height: 1.6;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  background: none;
+  border: none;
+  font-family: 'VT323', monospace;
+  box-shadow: none;
+  text-shadow: 0.5px 0.5px #ffffff;
+  line-height: 1.6;
+}
+
+.hero .btn {
+  display: inline-block;
+  background: linear-gradient(to bottom, #ad7b6d, #9d7752); 
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.8rem;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+  text-decoration: none;
+  font-family: 'Press Start 2P', monospace;
+  transition: all 0.2s ease;
+  border-radius: 3px;
+}
+
+.hero .btn:hover {
+  background: linear-gradient(to bottom, #ffb186, #f4b65f);
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0 #000;
+}
+
+.hero-img {
+  flex: 1;
+  max-width: 350px;
+  width: 100%;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  image-rendering: pixelated;
+  border-radius: 4px;
+}
+
+/* .. footer for all pages .. */
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #C0C0C0;
+  border-top: 3px solid #000;
+  padding: 0.8rem;
+  font-size: 11px;
+  text-align: center;
+  box-shadow: inset -2px -2px #808080, inset 2px 2px #fff;
+}
+
+/* .. vlogs page .. */
+
+.vlog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+}
+.vlog-bar{
+  display: flex;
+  justify-content: center; 
+  align-items: center;      
+  gap: 1rem; 
+  background-color: #e4ffe5ee; 
+  border: 2px solid #000;
+  border-top: 2px solid #fff;
+  box-shadow: inset -2px -2px #666, inset 2px 2px #fff;
+  padding: 10px 20px;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.vlog-header h2 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8rem;
+  color: #3b663def;
+  margin: 0;
+  line-height: 1.4;
+}
+.vlog-card {
+  width: 300px;
+  background: #f5f5f5;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+.vlog-card iframe {
+  width: 100%;
+  height: 170px;
+  margin-bottom: 0.5rem;
+}
+
+
+.vlog-card h3 {
+  color: #000080;
+  margin-bottom: 0.5rem;
+}
+
+.open-vlog-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.open-vlog-img {
+  width: 140px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.open-vlog-img:hover {
+  transform: scale(2.20);
+}
+
+.creator-popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-box {
+  background-color: #d5d9ec;
+  border: 2px solid #000;
+  padding: 1rem;
+  box-shadow: inset -2px -2px #808080, inset 2px 2px #fff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  width: 320px;
+  border-radius: 2px;
+}
+
+.popup-box h3 {
+  margin-bottom: 1rem;
+  font-size: 12px;
+  text-align: center;
+  color: #000080;
+}
+
+.popup-box input {
+  width: 100%;
+  padding: 6px;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  border: 2px solid #000;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-family: 'VT323', monospace;
+  background-color: #f0f0f0;
+  box-shadow: inset -2px -2px #aaa, inset 2px 2px #fff;
+}
+
+.popup-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.popup-btns button {
+  background-color: #eaeaea;
+  color: #000;
+  padding: 5px 10px;
+  border: 2px solid #000;
+  font-family: 'Press start 2p', monospace;
+  font-size: 11px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+
+}
+
+.popup-btns button:hover {
+  background-color: #8eff8a;
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 0 #000;
+}
+.popup-btns button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+
+/* .. music page .. */
+
+.music-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #fffbf0;
+  border: 2px solid #000;
+  border-top: 2px solid #fff;
+  box-shadow: inset -2px -2px #666, inset 2px 2px #fff;
+  padding: 10px 20px;
+  border-radius: 2px;
+  width: 100%;
+  font-family: 'Press Start 2P', monospace;
+  flex-wrap: wrap;
+}
+
+.music-header h2 {
+  font-size: 0.8rem;
+  color: #884ba8;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.music-header p {
+  font-size: 0.7rem;
+  color: #444;
+  margin: 0;
+  font-family: 'VT323', monospace;
+}
+
+
+    .music-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .music-card {
+      background-color: #F7F7F7;
+      border: 2px solid #000;
+      box-shadow: inset -2px -2px #808080, inset 2px 2px #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .track-title {
+      margin-top: 0.8rem;
+      font-size: 13px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+    }
+
+    .tags {
+      margin-top: 0.5rem;
+    }
+
+    .tags span {
+      display: inline-block;
+      background-color: #C0C0C0;
+      border: 1px solid #000;
+      padding: 2px 8px;
+      font-size: 10px;
+      font-family: 'VT323', monospace;
+      margin: 0 4px;
+      border-radius: 4px;
+    }
+
+    .search-bar {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.search-bar input {
+  padding: 0.6rem 1.2rem;
+  font-size: 16px;
+  font-family: 'VT323', monospace;
+  font-weight: bold;
+  border: 2px solid #000;
+  background-color: #fefefe;
+  color: #222;
+  box-shadow: inset -3px -3px #999, inset 3px 3px #fff;
+  border-radius: 6px;
+  width: 65%;
+  max-width: 320px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-bar input:focus {
+  background-color: #f0f0f0;
+  box-shadow: inset -3px -3px #666, inset 3px 3px #fff, 0 0 4px #aaa;
+  border-color: #444;
+}
+
+.search-bar button {
+  padding: 0.6rem 1.3rem;
+  font-size: 12px;
+  font-family: 'Press Start 2P', monospace;
+  background-color: #e9d8ff;
+  border: 2px solid #30106e; 
+  color: #43256b;
+  cursor: pointer;
+  margin-left: 8px;
+  box-shadow: inset -3px -3px #b89ede, inset 3px 3px #f6f0ff;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.search-bar button:hover {
+  background-color: #f3e8ff; 
+  box-shadow: inset -2px -2px #c9a6ff, inset 2px 2px #fefaff;
+  transform: translateY(-1px);
+}
+
+.search-bar button:active {
+  transform: translateY(1px);
+  box-shadow: inset 2px 2px #8263dd, inset -2px -2px #fff;
+}
+
+
+    /* .. login page .. */
+
+.login-container {
+  background: linear-gradient(135deg, #dcdcdc, #f0f0f0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  min-height: 100vh;
+  font-family: 'Press Start 2P', monospace;
+  background: url('https://i.redd.it/breluv06gbc31.png');
+}
+
+.login-card {
+  background-color: #ffffff;
+  padding: 2rem 1.5rem;
+  border: 2px solid #000;
+  box-shadow: inset -2px -2px #808080, inset 2px 2px #ffffff;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 6px;
+}
+
+.login-card h2 {
+  color: #000080;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 1px 1px #fff;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  border: 2px solid #000;
+  box-shadow: inset -2px -2px #808080, inset 2px 2px #fff;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  color: #000;
+  font-family: 'VT323', monospace;
+  border-radius: 4px;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 2px solid #000;
+  background: linear-gradient(to bottom, #d8d8d8, #d6d6d6);
+  box-shadow: inset -2px -2px #808080, inset 2px 2px #fff;
+  cursor: pointer;
+  color: #000;
+  font-family: 'Press Start 2P', monospace;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.login-card button:hover {
+  background: #ea7547;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 0 #000;
+}
+.login-card button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.signup-msg {
+  margin-top: 1.2rem;
+  font-size: 0.65rem;
+  text-align: center;
+  color: #000;
+}
+
+
+/* .. playlist page .. */
+
+
+.playlist-bar {
+  display: flex;
+  justify-content: center; 
+  align-items: center;      
+  gap: 1rem; 
+  background-color: #ffeeecee; 
+  border: 2px solid #000;
+  border-top: 2px solid #fff;
+  box-shadow: inset -2px -2px #666, inset 2px 2px #fff;
+  padding: 10px 20px;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.playlist-header {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8rem;
+  color: #c6086ed2;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.add-btn {
+  background-color: #e91a88d2; 
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.65rem;
+  font-family: 'Press Start 2P', monospace;
+  border: 2px solid #000;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 0 #444;
+}
+
+.add-btn:hover {
+  background-color: #ff5087ec;
+  box-shadow: 2px 2px 0 #222;
+  transform: translateY(-1px);
+}
+
+.add-btn:active {
+  transform: translateY(2px);
+}
+
+
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.playlist-card {
+  background-color: #f5f5f5;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 2px 2px 0 #000;
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+}
+
+.playlist-card iframe {
+  width: 100%;
+  height: 80px;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+.playlist-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.tags {
+  margin-top: 0.6rem;
+}
+
+.tag {
+  display: inline-block;
+  background: #e0e0e0;
+  border: 1px solid #000;
+  padding: 0.2rem 0.6rem;
+  margin: 0.2rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  font-family: 'Press Start 2P', 'VT323', monospace;
+}
+
+.popup-window {
+  background: #f4f4f4; 
+  border: 2px solid #000;
+  padding: 1.8rem 1.5rem;
+  width: 350px;
+  border-radius: 6px;
+  box-shadow: 3px 3px 0 #000;
+  text-align: center;
+}
+
+.popup-window h3 {
+  font-size: 1rem;
+  color: #121f83;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+.popup-window form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.popup-window input {
+  padding: 10px;
+  font-family: 'VT323', monospace;
+  border: 2px solid #666;
+  background-color: #fff;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 0 #ccc;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.popup-buttons button {
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  background: #d6d3ce;
+  color: #000;
+  border: 2px solid #444;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #888;
+  border-radius: 2px;
+}
+
+.popup-buttons button:hover {
+  background-color: #ff9c85;
+  transform: translateY(-2px);
+}
+
+.popup-buttons button:active{
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+
+/* .. focus page .. */
+
+.video-wrapper {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      filter: grayscale(100%) brightness(0.6);
+      pointer-events: none;
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .focus-window {
+    position: absolute;
+    width: 280px;
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0px #999;
+    z-index: 10;
+    cursor: move;
+}
+
+.focus-window-header {
+  background-color: #dcdcdc;
+  padding: 0.3rem 0.5rem;
+  border-bottom: 2px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.focus-window-header span {
+  font-weight: normal;
+  cursor: default;
+}
+
+.focus-window-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.focus-timer {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  background: #fff;
+  padding: 0.6rem 1rem;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px #999;
+}
+
+.focus-btns {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.focus-btns button {
+  font-size: 10px;
+  padding: 8px 8px;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+  font-family: 'Press Start 2P', monospace;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.focus-btns .start {
+  background-color: #008980;
+  
+  color: rgb(235, 255, 252);
+}
+
+.focus-btns .pause {
+  background-color: #ab1e48;
+  color: rgb(255, 235, 239);
+}
+
+.focus-btns .reset {
+  background-color: #f5be34;
+}
+
+.focus-btns button:hover {
+  transform: translateY(-2px);
+}
+
+.focus-btns button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.notes-folder {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  text-align: center;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.notes-folder img {
+  width: 90px; 
+  height: auto;
+  margin-bottom: 40px;
+  
+}
+
+.notes-popup {
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  width: 20%;
+  background-color: #130689; 
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 #555;
+  font-family: 'Press Start 2P', monospace;
+  display: none;
+  z-index: 1000;
+}
+
+.notes-popup textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid #000;
+  background: #fffff8;
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  color: #111;
+  box-shadow: inset -2px -2px #888, inset 2px 2px #fff;
+  resize: none;
+}
+
+.notes-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background-color: #fffcf4;
+  border-top: 2px solid #000;
+}
+
+.notes-buttons button {
+  background-color: #fdf0d5;
+  border: 2px solid #000;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  padding: 4px 10px;
+  box-shadow: 2px 2px 0 #444;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+.notes-buttons button:hover {
+  background-color: #ffca41;
+  box-shadow: 2px 2px 0 #222;
+}
+
+
+
+/* .. about page .. */
+
+.aboutWrapper {
+  padding: 3rem 1rem;
+  background: #f4f4f4;
+  font-family: 'VT323', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.windows-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.window {
+  width: 420px;
+  background-color: #fefefe;
+  border: 3px solid #000;
+  border-radius: 10px;
+  box-shadow: inset -5px -5px #a0a0a0, inset 5px 5px #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.window:hover {
+  transform: translateY(-3px);
+}
+
+.title-bar {
+  background-color: #dcdcdc;
+  border-bottom: 2px solid #000;
+  padding: 0.8rem 1rem;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2e2e2e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Press Start 2P', monospace;
+  text-shadow: 1px 1px #fff;
+}
+
+.window-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-box {
+  width: 16px;
+  height: 16px;
+  background-color: #c41f1f;
+  border: 2px solid #000;
+  box-shadow: inset -2px -2px #888, inset 2px 2px #fff;
+  border-radius: 3px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5rem;
+  color: #fff;
+  line-height: 1;
+}
+
+
+.btn-box.close {
+  background-color: #a200ff;
+}
+
+.content {
+  padding: 1.2rem 1.5rem;
+  color: #333;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.8rem;
+  font-family: 'VT323', monospace; 
+  font-size: 20px;
+  color: #5e3c6f; 
+  background-color: #fff4fa;  
+  border: 2px solid #000;
+  box-sizing: border-box;
+  box-shadow: inset -3px -3px #aaa, inset 3px 3px #fff;
+  resize: vertical;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+textarea::placeholder {
+  color: #808080;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.retro-btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 11px;
+  background-color: #dfdfdf;
+  color: #1a1a1a;
+  border: 2px solid #000;
+  padding: 0.6rem 1rem;
+  box-shadow: inset -2px -2px #999, inset 2px 2px #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.retro-btn:hover {
+  background-color: #ffc8b1;
+  border-right: 3px solid #3f3f3f;
+  border-bottom: 3px solid #3f3f3f;
+  box-shadow: inset -1px -1px #777, inset 1px 1px #fff;
+  transform: translateY(-1px);
+}
+
+.retro-btn:active {
+  transform: translateY(1px);
+  box-shadow: inset 2px 2px #999, inset -2px -2px #fff;
+}
+
+.blinking-cursor {
+  animation: blink 1.2s steps(2, start) infinite;
+  color: #333;
+  margin-right: 5px;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* toast msg */
+.melo-toast-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  font-family: 'VT323', monospace;
+}
+
+.melo-toast {
+  background: #f0f0f0;
+  color: black;
+  font-size: 15px;
+  padding: 10px 14px;
+  margin-top: 10px;
+  border: 2px solid #a0a0a0;
+  border-radius: 3px;
+  box-shadow: 3px 3px 0 #202020;
+  display: flex;
+  align-items: center;
+  max-width: 320px;
+  gap: 12px;
+  animation: fadein 0.3s, fadeout 0.3s 3.5s;
+}
+
+.melo-toast img.toast-icon {
+  width: 24px;
+  height: 24px;
+  image-rendering: pixelated;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 1024px) {
+  .music-grid,
+  .playlist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .window {
+    width: 90%;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+
+  .hero-img {
+    max-width: 80%;
+  }
+
+  .playlist-bar,
+  .vlog-bar,
+  .music-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+    font-size: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .nav-links a {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .hero-content h2 {
+    font-size: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .hero .btn {
+    font-size: 0.7rem;
+  }
+
+  .music-grid,
+  .playlist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .popup-window {
+    width: 90%;
+  }
+
+  .search-bar input {
+    width: 90%;
+  }
+
+  .notes-popup {
+    width: 90%;
+    left: 5%;
+    bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 10px;
+  }
+
+  .login-card {
+    padding: 1.2rem;
+  }
+
+  .playlist-header,
+  .vlog-header h2,
+  .music-header h2 {
+    font-size: 0.65rem;
+  }
+
+  .add-btn {
+    font-size: 0.55rem;
+    padding: 5px 10px;
+  }
+
+  .popup-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .focus-window {
+    width: 90%;
+    left: 5%;
+  }
+
+  .notes-folder img {
+    width: 60px;
+  }
+
+  .window {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .popup-box {
+    width: 90%;
+  }
+
+  footer {
+    font-size: 9px;
+    padding: 0.6rem;
+  }
+}

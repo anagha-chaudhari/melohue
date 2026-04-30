@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Focus Space • MeloHue</title>
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!--<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+-->  
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="logo">Melo<span>Hue</span></h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Back to Home</a></li>
+    </ul>
+  </nav>
+
+  <div class="video-wrapper">
+    <iframe id="youtubePlayer" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+ <div class="focus-window">
+  <div class="focus-window-header">
+    <span>Time to lock in</span>
+    <span>🗙</span>
+  </div>
+  <div class="focus-window-content">
+    <div class="focus-timer" id="timerDisplay">00:00</div>
+    <div class="focus-btns">
+      <button class="start" onclick="startFocus()">Start</button> 
+      <button class="pause" onclick="pauseFocus()">Pause</button>
+      <button class="reset" onclick="resetFocus()">Reset</button>
+    </div>
+  </div>
+</div>
+
+<div class="notes-folder">
+  <img src="images/folder-icon.png" alt="Notes Folder" id="openNotes" />
+</div>
+
+<div class="notes-popup" id="notesPopup">
+  <textarea id="notesText" placeholder="Write your session progress..."></textarea>
+  <div class="notes-buttons">
+    <button onclick="saveNotes()">Save</button>
+    <button onclick="closeNotes()">Close</button>
+  </div>
+</div>
+
+
+
+<footer>you + me = a gentle win • © 2025 MeloHue</footer>
+
+<script src="js/focus.js"></script>
+ 
+</body>
+</html>
