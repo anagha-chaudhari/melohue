@@ -1,30 +1,41 @@
-const express = require('express');
-const fetch = require('node-fetch');
-require('dotenv').config();
+const { createClient } = require('redis');
+const client = createClient({ url: process.env.REDIS_URL});
+client.on('error', (err) => console.log('Redis Client Error', err));
 
-const router = express.Router();
+let isReady = false;
 
-router.get('/study-videos', async (req, res) => {
-  const query = 'study with me 3 hours';
-  const maxResults = 5;
+async function connect() {
+  try{
+    await client.connect();
+    isReady = true;
+    console.log('Connected to Redis');
+  } catch (err) {
+    console.error('Failed to connect to Redis:', err);
+  }
+}
+
+connect();
+
+async function getCached(key, fn, ttl = 3600) {
+  // If Redis never connected, skip straight to real API
+  if (!isReady) return fn();
 
   try {
-    const apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${encodeURIComponent(query)}&key=${process.env.YT_API_KEY}&maxResults=${maxResults}`;
+    const cached = await client.get(key);
+    if (cached) {
+      console.log(`Cache HIT: ${key}`);
+      return JSON.parse(cached);
+    }
 
-    const response = await fetch(apiUrl);
-    const data = await response.json();
+    console.log(`Cache MISS: ${key}`);
+    const freshData = await fn();
+    await client.setEx(key, ttl, JSON.stringify(freshData));
+    return freshData;
 
-    const videos = data.items.map(item => ({
-      title: item.snippet.title,
-      youtubeId: item.id.videoId,
-      thumbnail: item.snippet.thumbnails.medium.url
-    }));
-
-    res.json(videos);
-  } catch (error) {
-    console.error('Error fetching study videos:', error);
-    res.status(500).json({ error: 'Failed to fetch study videos' });
+  } catch (err) {
+    console.error(`Redis error on key "${key}", falling back to API:`, err.message);
+    return fn(); // user never sees this failure
   }
-});
+}
 
-module.exports = router;
+module.exports = { getCached };
