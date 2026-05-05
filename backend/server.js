@@ -9,6 +9,7 @@ const focusRoutes = require('./yt_focus');
 const authRoutes = require('./routes/auth_route');
 const playlistRoutes = require('./routes/playlists_route');
 const msgRoutes = require('./routes/msg_route');
+const { getCached, connect } = require('./redis');
 
 const app = express();
 
@@ -74,6 +75,10 @@ app.get('/api/music/:query', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch tracks' });
   }
 });
+/*console.log('focusRoutes:', typeof focusRoutes);
+console.log('authRoutes:', typeof authRoutes);
+console.log('playlistRoutes:', typeof playlistRoutes);
+console.log('msgRoutes:', typeof msgRoutes);*/
 
 app.use('/api/focus', focusRoutes);
 
@@ -84,15 +89,19 @@ app.use('/api/playlist', playlistRoutes);
 app.use('/api/message', msgRoutes);
 
 
-mongoose.connect(process.env.MONGO_URI).then(() => {
-  console.log('MongoDB connected');
-  app.listen(PORT, () =>
-    console.log(`Server running on port ${PORT}`)
-  );
-}).catch((err) => {
-  console.error('DB connection failed:', err);
-});
+async function start() {
+  try {
+    await connect();               // Redis first, called exactly once
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log('MongoDB connected');
 
-app.listen(PORT, () => {
-  console.log(`Backend running at http://localhost:${PORT}`);
-});
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  } catch (err) {
+    console.error('Startup failed:', err.message);
+    process.exit(1);
+  }
+}
+
+start();

@@ -1,31 +1,46 @@
+require('dotenv').config();
 const { createClient } = require('redis');
 
-const client = createClient({ url: process.env.REDIS_URL});
+const client = createClient({ url: process.env.REDIS_URL });
 
-client.on('error', (err) => console.error('Redis error:', err));
+client.on('error', (err) => console.error('Redis error:', err.message));
 
-client.connect();
+let isReady = false;
 
-/**
- * getCached — the cache-aside pattern as a reusable function
- *
- * @param {string} key - unique Redis key e.g. "yt:studyvideos"
- * @param {function} fn - async function that fetches real data if cache misses
- * @param {number} ttl - seconds before Redis auto-deletes this key
- */
-
-async function getCached(key, fn, ttl = 3600) {
-    const cached = await client.get(key); // check redist first for this key
-
-    if (cached) {
-        console.log(`Cache hit for ${key}`);
-        return JSON.parse(cached); // data already exists, retrun it immediately
-    }
-
-    console.log(`Cache miss for ${key}`);
-    const freshData = await fn(); // if redis has nothing, call the real API
-    await client.setEx(key, ttl, JSON.stringify(freshData)); // store result as a string with TTL
-    return freshData;
+async function connect() {
+  try {
+    await client.connect();
+    isReady = true;
+    console.log('Connected to Redis');
+  } catch (err) {
+    console.error('Failed to connect to Redis — caching disabled:', err.message);
+  }
 }
 
-module.exports = { getCached };
+async function getCached(key, fn, ttl = 3600) {
+  if (!isReady) {
+    console.warn('Redis not ready, fetching from API directly');
+    return fn();
+  }
+
+  try {
+    const cached = await client.get(key);
+
+    if (cached) {
+      console.log(`Cache HIT: ${key}`);
+      return JSON.parse(cached);
+    }
+
+    console.log(`Cache MISS: ${key}`);
+    const freshData = await fn();
+    await client.setEx(key, ttl, JSON.stringify(freshData));
+    return freshData;
+
+  } catch (err) {
+    console.error(`Redis error on key "${key}", falling back:`, err.message);
+    return fn();
+  }
+}
+
+// Export connect so server.js awaits it — connect() is NOT called here
+module.exports = { getCached, connect };
