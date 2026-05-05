@@ -3,12 +3,10 @@ const mongoose = require('mongoose');
 const messageSchema = new mongoose.Schema({
   content: {
     type: String,
-    required: true
-  },
-  writtenAt: {
-    type: Date,
-    default: Date.now
+    required: true,
+    trim: true,
+    maxlength: 1000
   }
-});
+}, { timestamps: true });
 
 module.exports = mongoose.model('Message', messageSchema);
