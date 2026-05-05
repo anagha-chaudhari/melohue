@@ -1,6 +1,6 @@
 const express = require('express');
 const fetch = require('node-fetch');
-const { getCached } = require('./redis'); // ← import the helper
+const { getCached } = require('./redis'); // imporing the helper
 require('dotenv').config();
 
 const router = express.Router();

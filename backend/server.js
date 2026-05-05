@@ -88,6 +88,7 @@ app.use('/api/playlist', playlistRoutes);
 
 app.use('/api/message', msgRoutes);
 
+// redis, mongo, then server 
 
 async function start() {
   try {
