@@ -46,7 +46,7 @@ Maintain a personal notebook of songs you emotionally connect with. Save, revisi
 | API Response Time | ~1200 ms | ~8 ms |
 | External API Calls | Baseline | ↓ ~90% |
 
-A **Redis caching layer** dramatically reduced latency and external API dependency, making MeloHue feel instant.
+A **Redis caching layer** dramatically reduced latency and external API dependency.
 
 ---
 
@@ -99,6 +99,8 @@ REDIS_URL=redis://localhost:6379
 ![Creator Page](ss/creatorpage.png)
 
 ![Vlog Page](ss/vlogpage.png)
+
+![Focus Page](ss/image.png)
 
 ![Spotify Page](ss/spotifypage.png)
 
