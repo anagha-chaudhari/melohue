@@ -15,9 +15,9 @@
 
 ## Overview
 
-I used to keep YouTube and Spotify open while studying, and I'd always end up getting distracted switching between tabs. I just wanted one place where I could have my music, my channels, and a focus video — all together. So I built MeloHue as my own little space on the internet that keeps me on track without the noise. No more app switching, no more rabbit holes.
+I used to keep YouTube and Spotify open while studying, and I'd always end up getting distracted switching between tabs. I just wanted one place where I could have my music, my channels, and a focus video, all together. So I built MeloHue as my own little space on the internet that keeps me on track without the noise. No more app switching, no more rabbit holes.
 
-MeloHue is an interactive personal website that blends **retro Windows XP-era design aesthetics** with smooth, modern web interactions — creating a distinctive digital space that's equal parts nostalgic and functional.
+MeloHue is an interactive personal website that blends **retro Windows XP-era design aesthetics** with smooth, modern web interactions, creating a distinctive digital space that's equal parts nostalgic and functional.
 
 Designed for users who value simplicity and productivity, MeloHue brings your favorite media, focus tools, and music discovery into one distraction-free environment.
 
@@ -65,8 +65,8 @@ Fetches relevant background study videos and channel content dynamically for Foc
 Powers music search, playback preview, and playlist management within the app.
 
 ### Icons & Fonts
-- **Icons:** Canva Free Icons — used under Canva's free license policy.
-- **Fonts:** Sourced from [Google Fonts](https://fonts.google.com/) — free for personal and commercial use under the [Open Font License (OFL)](https://scripts.sil.org/OFL).
+- **Icons:** Canva Free Icons - used under Canva's free license policy.
+- **Fonts:** Sourced from [Google Fonts](https://fonts.google.com/) - free for personal and commercial use under the [Open Font License (OFL)](https://scripts.sil.org/OFL).
 
 ---
 
