@@ -2,8 +2,6 @@
 
 # 🎵 MeloHue
 
-**Your personal retro-aesthetic space for music, focus, and flow.**
-
 ![License](https://img.shields.io/badge/Copyright-Govt.%20of%20India-blue)
 ![Backend](https://img.shields.io/badge/Backend-Dockerized-2496ED?logo=docker)
 ![Cache](https://img.shields.io/badge/Cache-Redis-DC382D?logo=redis)
@@ -11,17 +9,13 @@
 
 </div>
 
----
-
 ## Overview
 
-I used to keep YouTube and Spotify open while studying, and I'd always end up getting distracted switching between tabs. I just wanted one place where I could have my music, my channels, and a focus video, all together. So I built MeloHue as my own little space on the internet that keeps me on track without the noise. No more app switching, no more rabbit holes.
+No more app switching, no more rabbit holes.
 
 MeloHue is an interactive personal website that blends **retro Windows XP-era design aesthetics** with smooth, modern web interactions, creating a distinctive digital space that's equal parts nostalgic and functional.
 
 Designed for users who value simplicity and productivity, MeloHue brings your favorite media, focus tools, and music discovery into one distraction-free environment.
-
----
 
 ## Features
 
@@ -37,7 +31,6 @@ Search tracks, preview playback, and personalize your music taste using the **Sp
 ### IV] Music Notebook
 Maintain a personal notebook of songs you emotionally connect with. Save, revisit, and reflect on your musical journey over time.
 
----
 
 ## Performance
 
@@ -48,13 +41,11 @@ Maintain a personal notebook of songs you emotionally connect with. Save, revisi
 
 A **Redis caching layer** dramatically reduced latency and external API dependency.
 
----
 
 ## Tech Stack
 
 HTML | CSS | JavaScript | Youtube Data API | Spotify API | Node.js | Express.js | MongoDB | Redis & Docker
 
----
 
 ## 🔌 APIs & External Services
 
