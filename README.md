@@ -20,16 +20,16 @@ Designed for users who value simplicity and productivity, MeloHue brings your fa
 ## Features
 
 ### I] Channel & Music Hub
-Browse your favorite vlog channels and music in a single, curated, distraction-free space — no algorithm rabbit holes, just what you love.
+Browse your favorite vlog channels and music in a single, curated, distraction-free space 
 
 ### II] Focus Mode
-Enter a deep-work session with a randomly fetched **"Study With Me"** YouTube video, pulled live via the YouTube Data API. Just click, and focus.
+Enter a deep-work session with a randomly fetched **"Study With Me"** YouTube video, pulled live via the YouTube Data API. 
 
 ### III] Spotify Integration
-Search tracks, preview playback, and personalize your music taste using the **Spotify API** — all without leaving MeloHue.
+Search tracks, preview playback, and personalize your music taste from Spotify - all without leaving MeloHue.
 
 ### IV] Music Notebook
-Maintain a personal notebook of songs you emotionally connect with. Save, revisit, and reflect on your musical journey over time.
+Maintain a personal notebook of songs you connect with. Save, revisit, and reflect on your musical journey over time.
 
 
 ## Performance
