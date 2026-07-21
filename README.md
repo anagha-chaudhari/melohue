@@ -4,7 +4,6 @@
 
 ![License](https://img.shields.io/badge/Copyright-Govt.%20of%20India-blue)
 ![Backend](https://img.shields.io/badge/Backend-Dockerized-2496ED?logo=docker)
-![Cache](https://img.shields.io/badge/Cache-Redis-DC382D?logo=redis)
 ![APIs](https://img.shields.io/badge/APIs-YouTube%20%7C%20Spotify-success)
 
 </div>
@@ -30,16 +29,6 @@ Search tracks, preview playback, and personalize your music taste from Spotify -
 
 ### IV] Music Notebook
 Maintain a personal notebook of songs you connect with. Save, revisit, and reflect on your musical journey over time.
-
-
-## Performance
-
-| Metric | Before | After |
-|---|---|---|
-| API Response Time | ~1200 ms | ~8 ms |
-| External API Calls | Baseline | ↓ ~90% |
-
-A **Redis caching layer** dramatically reduced latency and external API dependency.
 
 
 ## Tech Stack
